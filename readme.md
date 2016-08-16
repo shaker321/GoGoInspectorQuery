@@ -115,7 +115,7 @@ GoGoInspectorQuery's ajax method uses the XMLHttpRequest API to send and receive
      data: formData,
      dataType: "json",
      content-type: 'application/json',
-     success: (data) => { console.log("Go Go Gadget!!"); },
+     success: (data) => { console.log("Go Go Gadget!"); },
      error: (data) => { console.log("No No Gadget!"); }
    });
   ```
