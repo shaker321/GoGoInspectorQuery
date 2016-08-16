@@ -27,83 +27,83 @@ If passed a function, GoGoInspectorQuery will invoke the function once the DOM i
 ### addClass
 Add a class to DOM element(s):
 ```javascript
-   $someElement.addClass(className);
+   $goGoSomeElement.addClass(className);
   ```
 
 ### append
 Add child elements to DOM element(s):
 ```javascript
-   $someElement.append(children);
+   $goGoSomeElement.append(children);
   ```
 
 ### attr
 Get attribute of DOM element:
 ```javascript
-   $someElement.attr(attrName);
+   $goGoSomeElement.attr(attrName);
   ```
 
 Set attribute of DOM element(s):
 ```javascript
-   $someElement.attr(attrName, value);
+   $goGoSomeElement.attr(attrName, value);
   ```
 
 ### children
 Get children of DOM element(s):
 ```javascript
-   $someElement.children();
+   $goGoSomeElement.children();
   ```
 
 ### empty
 Clear innerHTML of DOM element(s):
 ```javascript
-   $someElement.empty();
+   $goGoSomeElement.empty();
   ```
 
 ### find
 Find DOM elements by selector:
 ```javascript
-   $someElement.find(selector);
+   $goGoSomeElement.find(selector);
   ```
 
 ### html
 Get innerHTML of DOM element:
 ```javascript
-   $someElement.html();
+   $goGoSomeElement.html();
   ```
 
 Set innerHTML of DOM element(s):
 ```javascript
-   $someElement.html("Go Go Gadget innerHTML!!!");
+   $goGoSomeElement.html("Go Go Gadget innerHTML!!!");
   ```
 
 ### off
 Remove event listener from DOM element(s):
 ```javascript
-   $someElement.off(eventName, callback);
+   $goGoSomeElement.off(eventName, callback);
   ```
 
 ### on
 Add event listener to DOM element(s):
 ```javascript
-   $someElement.on(eventName, callback);
+   $goGoSomeElement.on(eventName, callback);
   ```
 
 ### parent
 Get parent of DOM element(s):
 ```javascript
-   $someElement.parent();
+   $goGoSomeElement.parent();
   ```
 
 ### remove
 Remove DOM element(s):
 ```javascript
-   $someElement.remove();
+   $goGoSomeElement.remove();
   ```
 
 ### removeClass
 Remove class from DOM element(s):
 ```javascript
-   $someElement.removeClass(className);
+   $goGoSomeElement.removeClass(className);
   ```
 
 ## AJAX
