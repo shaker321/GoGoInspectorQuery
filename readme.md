@@ -9,17 +9,17 @@ GoGoInspectorQuery's heart and soul lies in its core function - $goGo. $goGo acc
 
 If passed an HTML element, GoGoInspectorQuery will wrap the element in a GoGoInspectorQuery object:
 ```javascript
-  var $newElement = $goGo("<ul/>");
+  let $newElement = $goGo("<ul/>");
   ```
 
 If passed a CSS selector, GoGoInspectorQuery will return an array of HTML elements in the document that match:
 ```javascript
-  var $listItems = $goGo("li");
+  let $listItems = $goGo("li");
   ```
 
 If passed a function, GoGoInspectorQuery will invoke the function once the DOM is fully loaded:
 ```javascript
-   $goGo(function() {console.log("Hello World!")});
+   $goGo(() => {console.log("Hello World!")});
   ```
 
 ## GoGoInspectorQuery Public API
