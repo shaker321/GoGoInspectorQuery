@@ -2,6 +2,34 @@
 
 A lightweight DOM manipulation library that supports event handling and AJAX requests.
 
+## How to Use
+To get started, download this repository to your local machine or run the following command:
+
+```
+https://github.com/shaker321/GoGoInspectorQuery.git
+```
+
+Change directories to that of GoGoInpectorQuery using:
+
+```
+cd GoGoInpectorQuery
+```
+
+Run webpack to bundle the component files:
+
+```
+webpack
+```
+
+Include `gogoinspectorquery.js` in the `<head>` of your HTML document as such:
+
+```html
+<head>
+  <script type="text/javascript" src="[PATH TO FILE]/lib/gogoinspectorquery.js"/>
+</head>
+```
+
+Enjoy the ease at which you can manipulate the DOM (plus the fact that you now have an excuse to yell "Go Go Gadget" while coding)!
 
 ## Core Functionality
 

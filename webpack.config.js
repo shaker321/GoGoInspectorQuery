@@ -1,8 +1,12 @@
 module.exports = {
+  context: __dirname,
   entry: "./lib/main.js",
   output: {
-    path: __dirname,
-    filename: "go_go_inspector_query.js"
-	},
-	devtool: "source-map"
+    path: "./lib/",
+    publicPath: "/lib",
+    filename: "gogoinspectorquery.js",
+    devtoolModuleFilenameTemplate: '[resourcePath]',
+    devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
+  },
+  devtool: 'source-maps',
 };
