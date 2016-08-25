@@ -6,7 +6,7 @@ A lightweight DOM manipulation library that supports event handling and AJAX req
 To get started, download this repository to your local machine or run the following command:
 
 ```
-https://github.com/shaker321/GoGoInspectorQuery.git
+git clone https://github.com/shaker321/GoGoInspectorQuery.git
 ```
 
 Change directories to that of GoGoInpectorQuery using:
@@ -52,7 +52,7 @@ If passed a function, GoGoInspectorQuery will invoke the function once the DOM i
 
 ## GoGoInspectorQuery Public API
 
-### addClass
+### addClass(args)
 Add a class to DOM element(s):
 ```javascript
   let $goGoElement = $goGo("<div></div>");
@@ -60,7 +60,7 @@ Add a class to DOM element(s):
   $goGoElement.addClass(className); // => "<div class='className'></div>"
 ```
 
-### append
+### append(args)
 Add child elements to DOM element(s):
 ```javascript
   let $goGoElement = $goGo("<div className='Parent'></div>");
@@ -68,7 +68,7 @@ Add child elements to DOM element(s):
   $goGoElement.append("<div className='child'></div>"); // => "<div className='Parent'> <div className='child'></div> </div>"
 ```
 
-### attr
+### attr(arg)/attr(args)
 Get attribute of DOM element:
 ```javascript
   let $goGoElement = $goGo("<input type='password'></input>");
@@ -83,13 +83,13 @@ Set attribute of DOM element(s):
   $goGoElement.attr("type", "text"); // => "<input type='text'></input>"
 ```
 
-### children
+### children()
 Get children of DOM element(s):
 ```javascript
   $goGoElement.children();
 ```
 
-### empty
+### empty()
 Clear innerHTML of DOM element(s):
 ```javascript
   let $goGoElement = $goGo("<div> <div>innerHTML</div> </div>");
@@ -97,13 +97,13 @@ Clear innerHTML of DOM element(s):
   $goGoElement.empty(); // => "<div></div>"
 ```
 
-### find
+### find(arg)
 Find DOM elements by selector:
 ```javascript
   $goGoElement.find("li"); // => "<li>Some list item</li>"
 ```
 
-### html
+### html()/html(arg)
 Get innerHTML of DOM element:
 ```javascript
   let $goGoElement = $goGo("<div> <div>innerHTML</div> </div>");
@@ -118,19 +118,19 @@ Set innerHTML of DOM element(s):
   $goGoElement.html("<div> Go Go Gadget innerHTML!!! </div>"); // => "<div><div> Go Go Gadget innerHTML!!! </div></div>"
 ```
 
-### off
+### off(eventName, callback)
 Remove event listener from DOM element(s):
 ```javascript
-  $goGoElement.off(eventName, callback);
+  $goGoElement.off("click", () => { console.log("Go Go Gadget Click!") });
 ```
 
-### on
+### on(eventName, callback)
 Add event listener to DOM element(s):
 ```javascript
-  $goGoElement.on(eventName, callback);
+  $goGoElement.on("click", () => { console.log("Go Go Gadget Click!") });
 ```
 
-### parent
+### parent(arg)
 Get parent of DOM element(s):
 ```javascript
   let $goGoOuterElement = $goGo("<li> <div>I'm an element!</div> </li>")
@@ -139,13 +139,13 @@ Get parent of DOM element(s):
   $goGoElement.parent(); // => "<li></li>"
 ```
 
-### remove
+### remove()
 Remove DOM element(s):
 ```javascript
   $goGoElement.remove();
 ```
 
-### removeClass
+### removeClass(arg)
 Remove class from DOM element(s):
 ```javascript
   let $goGoElement = $goGo("<div class='random-div'></div>");
@@ -155,6 +155,15 @@ Remove class from DOM element(s):
 
 ## AJAX
 GoGoInspectorQuery's ajax method uses the XMLHttpRequest API to send and receive data from a server:
+```javascript
+   $goGo.ajax({
+     url: "api.openweathermap.org/data/2.5/weather?zip=10001,us",
+     method: "GET",
+     success: (data) => { console.log(data); },
+     error: (data) => { console.log("An error occurred."); }
+   });
+```
+
 ```javascript
    $goGo.ajax({
      url: "/gadgets",
