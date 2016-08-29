@@ -25,7 +25,7 @@ Include `gogoinspectorquery.js` in the `<head>` of your HTML document as such:
 
 ```html
 <head>
-  <script type="text/javascript" src="[PATH TO FILE]/lib/gogoinspectorquery.js"/>
+  <script type="text/javascript" src="[PATH TO FILE]/lib/gogoinspectorquery.js"></script>
 </head>
 ```
 
@@ -37,7 +37,7 @@ GoGoInspectorQuery's heart and soul lies in its core function - $goGo. $goGo acc
 
 If passed an HTML element, GoGoInspectorQuery will wrap the element in a GoGoInspectorQuery object:
 ```javascript
-  let $newElement = $goGo("<ul/>");
+  let $newElement = $goGo("<ul></ul>");
   ```
 
 If passed a CSS selector, GoGoInspectorQuery will return an array of HTML elements in the document that match:
